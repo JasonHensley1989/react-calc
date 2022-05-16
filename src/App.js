@@ -17,7 +17,7 @@ function App() {
   }
 
   const calculate = () => {
-    setResult(eval(result))
+    setResult(eval(result).toString())
   }
 
   return (
