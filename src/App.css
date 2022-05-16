@@ -93,8 +93,8 @@ input {
 }
 
 #del {
-  grid-column: 1/3;
-  grid-row-start: 1;
+  grid-column: 2/3;
+  grid-row: 1;
   color: red;
 }
 

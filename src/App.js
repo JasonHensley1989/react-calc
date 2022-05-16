@@ -13,7 +13,11 @@ function App() {
   }
 
   const del = (e) => {
-    setResult();
+    setResult(result.slice(0, result.length -1));
+  }
+
+  const calculate = () => {
+    setResult(eval(result))
   }
 
   return (
@@ -23,7 +27,7 @@ function App() {
           <input type='text' value={result} />
         </form>
         <div className='keypad'>00000
-          <button onClick={del}>DEL</button>
+          <button onClick={del} id="del">DEL</button>
           <button onClick={clear} id='clear'>C</button>
           <button  name='/' onClick={handleClick}>/</button>
           <button  name='1' onClick={handleClick}>1</button>
@@ -39,8 +43,8 @@ function App() {
           <button  name='9' onClick={handleClick}>9</button>
           <button  name='-' onClick={handleClick}>-</button>
           <button  name='.' onClick={handleClick}>.</button>
-          <button  name='0' onClick={handleClick}>0</button>
-          <button onClick={handleClick} id='result'>=</button>
+          <button  name='0' onClick={handleClick} id='zero'>0</button>
+          <button onClick={calculate} id='result'>=</button>
         </div>
       </div>  
     </div>
